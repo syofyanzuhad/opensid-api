@@ -1,5 +1,8 @@
 <?php
 
+use Laravel\Lumen\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 /** @var \Laravel\Lumen\Routing\Router $router */
 
 /*
@@ -16,3 +19,11 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/users', ['middleware' => 'auth', function (Request $request, $id) {
+    $user = Auth::user();
+
+    $user = $request->user();
+
+    return $user;
+}]);
