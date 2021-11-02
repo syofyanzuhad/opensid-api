@@ -29,5 +29,8 @@ $router->group(['prefix' => 'v1'], function () use ($router) {
     $router->group(['middleware' => 'auth'], function () use ($router) {
         $router->put('/refresh', 'AuthController@refresh');
         $router->post('/logout', 'AuthController@logout');
+
+        $router->get('penduduk', 'PendudukController@index');
+        $router->get('penduduk/{id}', 'PendudukController@show');
     });
 });
