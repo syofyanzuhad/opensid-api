@@ -22,11 +22,12 @@ $router->get('/', function () use ($router) {
 $router->post('/register', 'UserController@register');
 $router->post('/login', 'UserController@login');
 
-$router->group(['prefix' => 'api'], function () use ($router) {
+$router->group(['prefix' => 'v1'], function () use ($router) {
     $router->post('/register', 'AuthController@register');
     $router->post('/login', 'AuthController@login');
 
     $router->group(['middleware' => 'auth'], function () use ($router) {
+        $router->put('/refresh', 'AuthController@refresh');
         $router->post('/logout', 'AuthController@logout');
     });
 });
