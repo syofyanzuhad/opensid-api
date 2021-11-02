@@ -19,11 +19,14 @@ use Illuminate\Support\Facades\Auth;
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+$router->post('/register', 'UserController@register');
+$router->post('/login', 'UserController@login');
 
-$router->get('/users', ['middleware' => 'auth', function (Request $request, $id) {
-    $user = Auth::user();
+$router->group(['prefix' => 'api'], function () use ($router) {
+    $router->post('/register', 'AuthController@register');
+    $router->post('/login', 'AuthController@login');
 
-    $user = $request->user();
-
-    return $user;
-}]);
+    $router->group(['middleware' => 'auth'], function () use ($router) {
+        $router->post('/logout', 'AuthController@logout');
+    });
+});
