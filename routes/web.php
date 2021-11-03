@@ -19,8 +19,6 @@ use Illuminate\Support\Facades\Auth;
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
-$router->post('/register', 'UserController@register');
-$router->post('/login', 'UserController@login');
 
 $router->group(['prefix' => 'v1'], function () use ($router) {
     $router->post('/register', 'AuthController@register');
@@ -32,5 +30,7 @@ $router->group(['prefix' => 'v1'], function () use ($router) {
 
         $router->get('penduduk', 'PendudukController@index');
         $router->get('penduduk/{id}', 'PendudukController@show');
+        $router->get('keluarga', 'KeluargaController@index');
+        $router->get('keluarga/{id}', 'KeluargaController@show');
     });
 });
