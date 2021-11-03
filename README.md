@@ -1,3 +1,40 @@
+# OpenSID API
+
+## Development
+1. Clone repositori.
+```
+git clone https://github.com/syofyanzuhad/opensid-api.git
+```
+2. Install composer.
+```
+cd opensid-api && composer install
+```
+3. Copy `.env.example` file to `.env`.
+```
+cp .env.example .env
+```
+4. Database configuration on `.env` file.
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=opensid
+DB_USERNAME=user
+DB_PASSWORD=password
+```
+5. Migrate database tables.
+```
+php artisan migrate
+```
+6. Make a JWT secret token.
+```
+php artisan jwt:secret
+```
+7. You're ready to go.
+```
+php artisan serve
+```
+
 # Lumen PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
