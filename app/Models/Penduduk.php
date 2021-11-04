@@ -47,4 +47,8 @@ class Penduduk extends Model
     public function cacat() {
         return $this->belongsTo('App\Models\Cacat', 'cacat_id');
     }
+
+    public function pendidikanKk() {
+        return $this->belongsTo('App\Models\PendidikanKartuKeluarga', 'pendidikan_kk_id');
+    }
 }
