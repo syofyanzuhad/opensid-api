@@ -68,8 +68,8 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER_DEPLOY }}
-          key: ${{ secrets.SSH_PRIVATE_KEY_DEPLOY }}
+          username: ${{ secrets.SSH_USER_ROOT }}
+          key: ${{ secrets.SSH_PRIVATE_KEY_ROOT }}
           port: ${{ secrets.SSH_PORT }}
           script: |
               cd ${{ secrets.DIR_OPENSID_API }}
