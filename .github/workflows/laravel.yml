@@ -1,4 +1,4 @@
-name: Actions Muhammadiyah
+name: Lumen Deployment
 
 on:
   push:
@@ -44,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Clone repo
+      - name: Pull update repository
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -53,7 +53,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
               cd ${{ secrets.DIR_OPENSID_API }}
-              git clone
+              git pull
       - name: Run Composer Install
         uses: appleboy/ssh-action@master
         with:
