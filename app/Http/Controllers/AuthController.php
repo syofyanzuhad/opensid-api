@@ -7,6 +7,15 @@ use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
+    /**
+     * Register a new user.
+     *
+     * @bodyParam name string required The name of the user. Example: "barenglor"
+     * @bodyParam email email required The user email.
+     * @bodyParam password string required Used to authenticate the user. Min: 6
+     *
+     * @return void
+     */
     public function register(Request $request)
     {
         $this->validate($request, [
@@ -32,6 +41,7 @@ class AuthController extends Controller
     /**
      * Log the user out (Invalidate the token).
      *
+     * @authenticated
      * @return \Illuminate\Http\JsonResponse
      */
     public function logout()
@@ -41,6 +51,14 @@ class AuthController extends Controller
         return response()->json(['message' => 'Successfully logged out']);
     }
 
+    /**
+     * Get the authenticated User.
+     *
+     * @bodyParam email email required The user email.
+     * @bodyParam password string required Used to authenticate the user.
+     * 
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function login(Request $request)
     {
         $this->validate($request, [
@@ -56,7 +74,15 @@ class AuthController extends Controller
 
         return $this->respondWithToken($token);
     }
-    
+
+    /**
+     * Get the token array structure.
+     *
+     * @authenticated
+     * @param string $token
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function refresh()
     {
         return $this->respondWithToken(auth()->refresh());

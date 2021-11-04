@@ -19,4 +19,9 @@ class Keluarga extends Model
     protected $fillable = [
         'id', 'nama'
     ];
+
+    public function penduduk()
+    {
+        return $this->hasOne('App\Models\Penduduk', 'id');
+    }
 }

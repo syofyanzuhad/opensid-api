@@ -1,0 +1,363 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: /
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: 'Lumen (8.3.1) (Laravel Components ^8.0)'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: v1/register
+    metadata:
+      title: 'Register a new user.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'The name of the user.'
+        required: true
+        example: '"barenglor"'
+        type: string
+      email:
+        name: email
+        description: 'The user email.'
+        required: true
+        example: similique
+        type: email
+      password:
+        name: password
+        description: 'Used to authenticate the user. Min: 6'
+        required: true
+        example: totam
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: v1/login
+    metadata:
+      title: 'Get the authenticated User.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'The user email.'
+        required: true
+        example: officiis
+        type: email
+      password:
+        name: password
+        description: 'Used to authenticate the user.'
+        required: true
+        example: ullam
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: v1/logout
+    metadata:
+      title: 'Log the user out (Invalidate the token).'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: v1/penduduk
+    metadata:
+      title: 'Display a listing of the Penduduk resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+               "data": [
+                   {
+                       "id": 1,
+                       "created_at": "2019-05-28T15:45:28.000000Z",
+                       "updated_at": "2020-07-30T04:30:21.000000Z",
+                       "deleted_at": null,
+                       "nik": "5201142005716996",
+                       "chip_ektp": 0,
+                       "nama": "AHLUL",
+                       "tgl_lahir": "1970-05-20",
+                       "tempat_lahir": "MANGSIT",
+                       "jk": "LAKI-LAKI",
+                       "alamat_sekarang": "",
+                       "agama": "ISLAM",
+                       "pendidikan": "TAMAT SD / SEDERAJAT",
+                       "pekerjaan": "TUKANG BATU",
+                       "status_kawin": "KAWIN",
+                       "status_penduduk": null,
+                       "kewarganegaraan": "WNI",
+                       "anak_ke": 0,
+                       "golongan_darah": "TIDAK TAHU",
+                       "status_dalam_keluarga": null,
+                       "no_paspor": "",
+                       "suku": null,
+                       "potensi_diri": null,
+                       "no_hp": null,
+                       "nik_ayah": "",
+                       "nik_ibu": "",
+                       "nama_ayah": "ARFAH",
+                       "nama_ibu": "RAISAH",
+                       "tgl_exp_paspor": null,
+                       "akta_lahir": "",
+                       "akta_kawin": "",
+                       "tgl_kawin": null,
+                       "akta_cerai": "",
+                       "tgl_cerai": null,
+                       "kelainan_fisik": null,
+                       "cacat": null,
+                       "foto": "",
+                       "pass_field": null,
+                       "status_covid": null,
+                       "status_vaksin": null,
+                       "status_stunting": null,
+                       "created_by": 0,
+                       "updated_by": 1,
+                       "deleted_by": null
+                   },
+               ],
+          }
+        headers: []
+        description: '200, success'
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'v1/penduduk/{id}'
+    metadata:
+      title: 'Show one of the Penduduk resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: ''
+        required: true
+        example: at
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+               "data": {
+                   "id": 1,
+                   "created_at": "2019-05-28T15:45:28.000000Z",
+                   "updated_at": "2020-07-30T04:30:21.000000Z",
+                   "deleted_at": null,
+                   "nik": "5201142005716996",
+                   "chip_ektp": 0,
+                   "nama": "AHLUL",
+                   "tgl_lahir": "1970-05-20",
+                   "tempat_lahir": "MANGSIT",
+                   "jk": "LAKI-LAKI",
+                   "alamat_sekarang": "",
+                   "agama": "ISLAM",
+                   "pendidikan": "TAMAT SD / SEDERAJAT",
+                   "pekerjaan": "TUKANG BATU",
+                   "status_kawin": "KAWIN",
+                   "status_penduduk": null,
+                   "kewarganegaraan": "WNI",
+                   "anak_ke": 0,
+                   "golongan_darah": "TIDAK TAHU",
+                   "status_dalam_keluarga": null,
+                   "no_paspor": "",
+                   "suku": null,
+                   "potensi_diri": null,
+                   "no_hp": null,
+                   "nik_ayah": "",
+                   "nik_ibu": "",
+                   "nama_ayah": "ARFAH",
+                   "nama_ibu": "RAISAH",
+                   "tgl_exp_paspor": null,
+                   "akta_lahir": "",
+                   "akta_kawin": "",
+                   "tgl_kawin": null,
+                   "akta_cerai": "",
+                   "tgl_cerai": null,
+                   "kelainan_fisik": null,
+                   "cacat": null,
+                   "foto": "",
+                   "pass_field": null,
+                   "status_covid": null,
+                   "status_vaksin": null,
+                   "status_stunting": null,
+                   "created_by": 0,
+                   "updated_by": 1,
+                   "deleted_by": null
+               }
+           }
+        headers: []
+        description: '200, success'
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: v1/keluarga
+    metadata:
+      title: 'Display a listing of the Keluarga resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+               "data": [
+               {
+                   "id": 1,
+                   "kepala_keluarga": {
+                       "nama": "AHLUL",
+                       "nik": "5201142005716996"
+                   },
+                   "alamat_lengkap": null,
+                   "no_kk": "5201140104126994",
+                   "jalan_blok": null,
+                    "kode_pos": null,
+                   "status_kesejahteraan": null,
+                   "penghasilan": null,
+                   "status_kk": null,
+                   "status_pkh": null,
+                   "status_blt": null,
+                   "status_bansos": null,
+                   "desa": null,
+                   "menguasai": null
+               },
+          }
+        headers: []
+        description: '200, success'
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'v1/keluarga/{id}'
+    metadata:
+      title: 'Show one of the Keluarga resource.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: ''
+        required: true
+        example: ducimus
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+               "data": {
+                   "id": 1,
+                   "kepala_keluarga": {
+                       "nama": "AHLUL",
+                        "nik": "5201142005716996"
+                   },
+                   "alamat_lengkap": null,
+                   "no_kk": "5201140104126994",
+                   "jalan_blok": null,
+                   "kode_pos": null,
+                   "status_kesejahteraan": null,
+                   "penghasilan": null,
+                   "status_kk": null,
+                   "status_pkh": null,
+                   "status_blt": null,
+                   "status_bansos": null,
+                   "desa": null,
+                   "menguasai": null
+               }
+           }
+        headers: []
+        description: '200, success'
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: v1/refresh
+    metadata:
+      title: 'Get the token array structure.'
+      description: ''
+      authenticated: true
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
