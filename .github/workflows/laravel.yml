@@ -64,3 +64,13 @@ jobs:
           script: |
               cd ${{ secrets.DIR_OPENSID_API }}
               php7.4 /usr/local/bin/composer install
+      - name: Generate the Docs
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER_DEPLOY }}
+          key: ${{ secrets.SSH_PRIVATE_KEY_DEPLOY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+              cd ${{ secrets.DIR_OPENSID_API }}
+              php7.4 artisan scribe:generate
