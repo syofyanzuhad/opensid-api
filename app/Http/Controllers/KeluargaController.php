@@ -17,25 +17,26 @@ class KeluargaController extends Controller
      * @response scenario=success 
      * {
      *      "data": [
-     *      {
-     *          "id": 1,
-     *          "kepala_keluarga": {
-     *              "nama": "AHLUL",
-     *              "nik": "5201142005716996"
-     *          },
-     *          "alamat_lengkap": null,
-     *          "no_kk": "5201140104126994",
-     *          "jalan_blok": null,
-     *           "kode_pos": null,
-     *          "status_kesejahteraan": null,
-     *          "penghasilan": null,
-     *          "status_kk": null,
-     *          "status_pkh": null,
-     *          "status_blt": null,
-     *          "status_bansos": null,
-     *          "desa": null,
-     *          "menguasai": null
-     *      },
+     *           {   
+     *               "id": 1,
+     *               "kepala_keluarga": {
+     *                   "nama": "AHLUL",
+     *                   "nik": "5201142005716996"
+     *               },
+     *               "alamat_lengkap": null,
+     *               "no_kk": "5201140104126994",
+     *               "jalan_blok": null,
+     *                "kode_pos": null,
+     *               "status_kesejahteraan": null,
+     *               "penghasilan": null,
+     *               "status_kk": null,
+     *               "status_pkh": null,
+     *               "status_blt": null,
+     *               "status_bansos": null,
+     *               "desa": null,
+     *               "menguasai": null
+     *           },
+     *      ],
      * }
      */
     public function index()
