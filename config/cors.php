@@ -26,12 +26,12 @@ return [
     /*
     * Matches the request method. `['*']` allows all methods.
     */
-    'allowed_methods' => ['POST'],
+    'allowed_methods' => ['*'],
 
     /*
      * Matches the request origin. `['*']` allows all origins. Wildcards can be used, eg `*.mydomain.com`
      */
-    'allowed_origins' => ['https://sandboxindonesia.id'],
+    'allowed_origins' => ['*'],
 
     /*
      * Patterns that can be used with `preg_match` to match the origin.
