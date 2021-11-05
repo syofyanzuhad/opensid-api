@@ -24,4 +24,19 @@ class Keluarga extends Model
     {
         return $this->hasOne('App\Models\Penduduk', 'id');
     }
+
+    public function cluster()
+    {
+        return $this->hasOne('App\Models\ClusterDesa', 'id');
+    }
+
+    public function keluargaSejahtera()
+    {
+        return $this->hasOne('App\Models\KeluargaSejahtera', 'id');
+    }
+
+    public function getDesaAttribute()
+    {
+        return \App\Models\Desa::first();
+    }
 }
