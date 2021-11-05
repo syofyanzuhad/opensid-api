@@ -50,13 +50,13 @@ endpoints:
         name: email
         description: 'The user email.'
         required: true
-        example: similique
+        example: pariatur
         type: email
       password:
         name: password
         description: 'Used to authenticate the user. Min: 6'
         required: true
-        example: totam
+        example: quis
         type: string
     responses: []
     responseFields: []
@@ -78,13 +78,13 @@ endpoints:
         name: email
         description: 'The user email.'
         required: true
-        example: officiis
+        example: ratione
         type: email
       password:
         name: password
         description: 'Used to authenticate the user.'
         required: true
-        example: ullam
+        example: saepe
         type: string
     responses: []
     responseFields: []
@@ -194,7 +194,7 @@ endpoints:
         name: id
         description: ''
         required: true
-        example: at
+        example: iusto
         type: string
     queryParameters: []
     bodyParameters: []
@@ -274,25 +274,26 @@ endpoints:
         content: |-
           {
                "data": [
-               {
-                   "id": 1,
-                   "kepala_keluarga": {
-                       "nama": "AHLUL",
-                       "nik": "5201142005716996"
-                   },
-                   "alamat_lengkap": null,
-                   "no_kk": "5201140104126994",
-                   "jalan_blok": null,
-                    "kode_pos": null,
-                   "status_kesejahteraan": null,
-                   "penghasilan": null,
-                   "status_kk": null,
-                   "status_pkh": null,
-                   "status_blt": null,
-                   "status_bansos": null,
-                   "desa": null,
-                   "menguasai": null
-               },
+                    {
+                        "id": 1,
+                        "kepala_keluarga": {
+                            "nama": "AHLUL",
+                            "nik": "5201142005716996"
+                        },
+                        "alamat_lengkap": null,
+                        "no_kk": "5201140104126994",
+                        "jalan_blok": null,
+                         "kode_pos": null,
+                        "status_kesejahteraan": null,
+                        "penghasilan": null,
+                        "status_kk": null,
+                        "status_pkh": null,
+                        "status_blt": null,
+                        "status_bansos": null,
+                        "desa": null,
+                        "menguasai": null
+                    },
+               ],
           }
         headers: []
         description: '200, success'
@@ -314,7 +315,7 @@ endpoints:
         name: id
         description: ''
         required: true
-        example: ducimus
+        example: voluptas
         type: string
     queryParameters: []
     bodyParameters: []
