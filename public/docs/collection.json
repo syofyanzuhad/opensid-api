@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "OpenSID-API",
-        "_postman_id": "a0d0446a-8732-422f-b4c2-de35614e6ab3",
+        "_postman_id": "7da4672e-52f5-4604-a38d-e5fef94c132c",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -87,7 +87,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"\\\"barenglor\\\"\",\"email\":\"similique\",\"password\":\"totam\"}"
+                            "raw": "{\"name\":\"\\\"barenglor\\\"\",\"email\":\"pariatur\",\"password\":\"quis\"}"
                         },
                         "description": "",
                         "auth": {
@@ -119,7 +119,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"officiis\",\"password\":\"ullam\"}"
+                            "raw": "{\"email\":\"ratione\",\"password\":\"saepe\"}"
                         },
                         "description": "",
                         "auth": {
@@ -200,7 +200,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "at",
+                                    "value": "iusto",
                                     "description": ""
                                 }
                             ]
@@ -256,7 +256,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\n     \"data\": [\n     {\n         \"id\": 1,\n         \"kepala_keluarga\": {\n             \"nama\": \"AHLUL\",\n             \"nik\": \"5201142005716996\"\n         },\n         \"alamat_lengkap\": null,\n         \"no_kk\": \"5201140104126994\",\n         \"jalan_blok\": null,\n          \"kode_pos\": null,\n         \"status_kesejahteraan\": null,\n         \"penghasilan\": null,\n         \"status_kk\": null,\n         \"status_pkh\": null,\n         \"status_blt\": null,\n         \"status_bansos\": null,\n         \"desa\": null,\n         \"menguasai\": null\n     },\n}",
+                            "body": "{\n     \"data\": [\n          {\n              \"id\": 1,\n              \"kepala_keluarga\": {\n                  \"nama\": \"AHLUL\",\n                  \"nik\": \"5201142005716996\"\n              },\n              \"alamat_lengkap\": null,\n              \"no_kk\": \"5201140104126994\",\n              \"jalan_blok\": null,\n               \"kode_pos\": null,\n              \"status_kesejahteraan\": null,\n              \"penghasilan\": null,\n              \"status_kk\": null,\n              \"status_pkh\": null,\n              \"status_blt\": null,\n              \"status_bansos\": null,\n              \"desa\": null,\n              \"menguasai\": null\n          },\n     ],\n}",
                             "name": "success"
                         }
                     ]
@@ -274,7 +274,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "ducimus",
+                                    "value": "voluptas",
                                     "description": ""
                                 }
                             ]

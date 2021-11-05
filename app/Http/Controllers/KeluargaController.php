@@ -19,23 +19,38 @@ class KeluargaController extends Controller
      *      "data": [
      *           {   
      *               "id": 1,
-     *               "kepala_keluarga": {
-     *                   "nama": "AHLUL",
-     *                   "nik": "5201142005716996"
-     *               },
+     *                  "kepala_keluarga": {
+     *                      "nama": "AHLUL",
+     *                      "nik": "5201142005716996"
+     *                   },
      *               "alamat_lengkap": null,
+     *               "objek_alamat": {
+     *                   "id": 1,
+     *                   "rt": "0",
+     *                   "rw": "0",
+     *                   "dusun": "MANGSIT",
+     *                   "id_kepala": 0,
+     *                   "lat": "",
+     *                   "lng": "",
+     *                   "zoom": 0,
+     *                   "path": "",
+     *                   "map_tipe": "",
+     *                   "warna": null,
+     *                   "urut": null,
+     *                   "urut_cetak": null
+     *               },
      *               "no_kk": "5201140104126994",
      *               "jalan_blok": null,
-     *                "kode_pos": null,
-     *               "status_kesejahteraan": null,
+     *               "kode_pos": "83355",
+     *               "status_kesejahteraan": "Keluarga Pra Sejahtera",
      *               "penghasilan": null,
      *               "status_kk": null,
      *               "status_pkh": null,
      *               "status_blt": null,
      *               "status_bansos": null,
-     *               "desa": null,
+     *               "desa": "5201142005",
      *               "menguasai": null
-     *           },
+     *           }
      *      ],
      * }
      */
@@ -55,21 +70,36 @@ class KeluargaController extends Controller
      * {
      *      "data": {
      *          "id": 1,
-     *          "kepala_keluarga": {
-     *              "nama": "AHLUL",
-     *               "nik": "5201142005716996"
-     *          },
+     *             "kepala_keluarga": {
+     *                 "nama": "AHLUL",
+     *                 "nik": "5201142005716996"
+     *              },
      *          "alamat_lengkap": null,
+     *          "objek_alamat": {
+     *              "id": 1,
+     *              "rt": "0",
+     *              "rw": "0",
+     *              "dusun": "MANGSIT",
+     *              "id_kepala": 0,
+     *              "lat": "",
+     *              "lng": "",
+     *              "zoom": 0,
+     *              "path": "",
+     *              "map_tipe": "",
+     *              "warna": null,
+     *              "urut": null,
+     *              "urut_cetak": null
+     *          },
      *          "no_kk": "5201140104126994",
      *          "jalan_blok": null,
-     *          "kode_pos": null,
-     *          "status_kesejahteraan": null,
+     *          "kode_pos": "83355",
+     *          "status_kesejahteraan": "Keluarga Pra Sejahtera",
      *          "penghasilan": null,
      *          "status_kk": null,
      *          "status_pkh": null,
      *          "status_blt": null,
      *          "status_bansos": null,
-     *          "desa": null,
+     *          "desa": "5201142005",
      *          "menguasai": null
      *      }
      *  }

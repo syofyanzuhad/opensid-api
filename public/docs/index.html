@@ -182,8 +182,8 @@ content-type: application/json
     --header "Accept: application/json" \
     --data "{
     \"name\": \"\\\"barenglor\\\"\",
-    \"email\": \"similique\",
-    \"password\": \"totam\"
+    \"email\": \"pariatur\",
+    \"password\": \"quis\"
 }"
 </code></pre>
 
@@ -198,8 +198,8 @@ const headers = {
 
 let body = {
     "name": "\"barenglor\"",
-    "email": "similique",
-    "password": "totam"
+    "email": "pariatur",
+    "password": "quis"
 };
 
 fetch(url, {
@@ -266,7 +266,7 @@ fetch(url, {
                 <input type="text"
                name="email"
                data-endpoint="POSTv1-register"
-               value="similique"
+               value="pariatur"
                data-component="body" hidden>
     <br>
 <p>The user email.</p>
@@ -276,7 +276,7 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTv1-register"
-               value="totam"
+               value="quis"
                data-component="body" hidden>
     <br>
 <p>Used to authenticate the user. Min: 6</p>
@@ -299,8 +299,8 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"officiis\",
-    \"password\": \"ullam\"
+    \"email\": \"ratione\",
+    \"password\": \"saepe\"
 }"
 </code></pre>
 
@@ -314,8 +314,8 @@ const headers = {
 };
 
 let body = {
-    "email": "officiis",
-    "password": "ullam"
+    "email": "ratione",
+    "password": "saepe"
 };
 
 fetch(url, {
@@ -372,7 +372,7 @@ fetch(url, {
                 <input type="text"
                name="email"
                data-endpoint="POSTv1-login"
-               value="officiis"
+               value="ratione"
                data-component="body" hidden>
     <br>
 <p>The user email.</p>
@@ -382,7 +382,7 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTv1-login"
-               value="ullam"
+               value="saepe"
                data-component="body" hidden>
     <br>
 <p>Used to authenticate the user.</p>
@@ -628,13 +628,13 @@ fetch(url, {
 
 
 <pre><code class="language-bash">curl --request GET \
-    --get "http://opensid-api.test/v1/penduduk/at" \
+    --get "http://opensid-api.test/v1/penduduk/iusto" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
 <pre><code class="language-javascript">const url = new URL(
-    "http://opensid-api.test/v1/penduduk/at"
+    "http://opensid-api.test/v1/penduduk/iusto"
 );
 
 const headers = {
@@ -758,7 +758,7 @@ fetch(url, {
                 <input type="text"
                name="id"
                data-endpoint="GETv1-penduduk--id-"
-               value="at"
+               value="iusto"
                data-component="url" hidden>
     <br>
 
@@ -807,25 +807,26 @@ fetch(url, {
 
 <code class="language-json">{
      &quot;data&quot;: [
-     {
-         &quot;id&quot;: 1,
-         &quot;kepala_keluarga&quot;: {
-             &quot;nama&quot;: &quot;AHLUL&quot;,
-             &quot;nik&quot;: &quot;5201142005716996&quot;
-         },
-         &quot;alamat_lengkap&quot;: null,
-         &quot;no_kk&quot;: &quot;5201140104126994&quot;,
-         &quot;jalan_blok&quot;: null,
-          &quot;kode_pos&quot;: null,
-         &quot;status_kesejahteraan&quot;: null,
-         &quot;penghasilan&quot;: null,
-         &quot;status_kk&quot;: null,
-         &quot;status_pkh&quot;: null,
-         &quot;status_blt&quot;: null,
-         &quot;status_bansos&quot;: null,
-         &quot;desa&quot;: null,
-         &quot;menguasai&quot;: null
-     },
+          {
+              &quot;id&quot;: 1,
+              &quot;kepala_keluarga&quot;: {
+                  &quot;nama&quot;: &quot;AHLUL&quot;,
+                  &quot;nik&quot;: &quot;5201142005716996&quot;
+              },
+              &quot;alamat_lengkap&quot;: null,
+              &quot;no_kk&quot;: &quot;5201140104126994&quot;,
+              &quot;jalan_blok&quot;: null,
+               &quot;kode_pos&quot;: null,
+              &quot;status_kesejahteraan&quot;: null,
+              &quot;penghasilan&quot;: null,
+              &quot;status_kk&quot;: null,
+              &quot;status_pkh&quot;: null,
+              &quot;status_blt&quot;: null,
+              &quot;status_bansos&quot;: null,
+              &quot;desa&quot;: null,
+              &quot;menguasai&quot;: null
+          },
+     ],
 }</code>
  </pre>
     </span>
@@ -891,13 +892,13 @@ fetch(url, {
 
 
 <pre><code class="language-bash">curl --request GET \
-    --get "http://opensid-api.test/v1/keluarga/ducimus" \
+    --get "http://opensid-api.test/v1/keluarga/voluptas" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
 <pre><code class="language-javascript">const url = new URL(
-    "http://opensid-api.test/v1/keluarga/ducimus"
+    "http://opensid-api.test/v1/keluarga/voluptas"
 );
 
 const headers = {
@@ -994,7 +995,7 @@ fetch(url, {
                 <input type="text"
                name="id"
                data-endpoint="GETv1-keluarga--id-"
-               value="ducimus"
+               value="voluptas"
                data-component="url" hidden>
     <br>
 

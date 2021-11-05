@@ -73,11 +73,11 @@ paths:
                 email:
                   type: email
                   description: 'The user email.'
-                  example: similique
+                  example: pariatur
                 password:
                   type: string
                   description: 'Used to authenticate the user. Min: 6'
-                  example: totam
+                  example: quis
               required:
                 - name
                 - email
@@ -115,11 +115,11 @@ paths:
                 email:
                   type: email
                   description: 'The user email.'
-                  example: officiis
+                  example: ratione
                 password:
                   type: string
                   description: 'Used to authenticate the user.'
-                  example: ullam
+                  example: saepe
               required:
                 - email
                 - password
@@ -323,7 +323,7 @@ paths:
         in: path
         name: id
         description: ''
-        example: at
+        example: iusto
         required: true
         schema:
           type: string
@@ -360,7 +360,7 @@ paths:
             text/plain:
               schema:
                 type: string
-                example: "{\n     \"data\": [\n     {\n         \"id\": 1,\n         \"kepala_keluarga\": {\n             \"nama\": \"AHLUL\",\n             \"nik\": \"5201142005716996\"\n         },\n         \"alamat_lengkap\": null,\n         \"no_kk\": \"5201140104126994\",\n         \"jalan_blok\": null,\n          \"kode_pos\": null,\n         \"status_kesejahteraan\": null,\n         \"penghasilan\": null,\n         \"status_kk\": null,\n         \"status_pkh\": null,\n         \"status_blt\": null,\n         \"status_bansos\": null,\n         \"desa\": null,\n         \"menguasai\": null\n     },\n}"
+                example: "{\n     \"data\": [\n          {\n              \"id\": 1,\n              \"kepala_keluarga\": {\n                  \"nama\": \"AHLUL\",\n                  \"nik\": \"5201142005716996\"\n              },\n              \"alamat_lengkap\": null,\n              \"no_kk\": \"5201140104126994\",\n              \"jalan_blok\": null,\n               \"kode_pos\": null,\n              \"status_kesejahteraan\": null,\n              \"penghasilan\": null,\n              \"status_kk\": null,\n              \"status_pkh\": null,\n              \"status_blt\": null,\n              \"status_bansos\": null,\n              \"desa\": null,\n              \"menguasai\": null\n          },\n     ],\n}"
       tags:
         - Endpoints
   '/v1/keluarga/{id}':
@@ -441,7 +441,7 @@ paths:
         in: path
         name: id
         description: ''
-        example: ducimus
+        example: voluptas
         required: true
         schema:
           type: string
