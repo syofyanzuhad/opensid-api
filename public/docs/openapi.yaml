@@ -73,11 +73,11 @@ paths:
                 email:
                   type: email
                   description: 'The user email.'
-                  example: pariatur
+                  example: optio
                 password:
                   type: string
                   description: 'Used to authenticate the user. Min: 6'
-                  example: quis
+                  example: ducimus
               required:
                 - name
                 - email
@@ -115,11 +115,11 @@ paths:
                 email:
                   type: email
                   description: 'The user email.'
-                  example: ratione
+                  example: tempora
                 password:
                   type: string
                   description: 'Used to authenticate the user.'
-                  example: saepe
+                  example: expedita
               required:
                 - email
                 - password
@@ -323,7 +323,7 @@ paths:
         in: path
         name: id
         description: ''
-        example: iusto
+        example: sunt
         required: true
         schema:
           type: string
@@ -360,7 +360,7 @@ paths:
             text/plain:
               schema:
                 type: string
-                example: "{\n     \"data\": [\n          {\n              \"id\": 1,\n              \"kepala_keluarga\": {\n                  \"nama\": \"AHLUL\",\n                  \"nik\": \"5201142005716996\"\n              },\n              \"alamat_lengkap\": null,\n              \"no_kk\": \"5201140104126994\",\n              \"jalan_blok\": null,\n               \"kode_pos\": null,\n              \"status_kesejahteraan\": null,\n              \"penghasilan\": null,\n              \"status_kk\": null,\n              \"status_pkh\": null,\n              \"status_blt\": null,\n              \"status_bansos\": null,\n              \"desa\": null,\n              \"menguasai\": null\n          },\n     ],\n}"
+                example: "{\n     \"data\": [\n          {\n              \"id\": 1,\n                 \"kepala_keluarga\": {\n                     \"nama\": \"AHLUL\",\n                     \"nik\": \"5201142005716996\"\n                  },\n              \"alamat_lengkap\": null,\n              \"objek_alamat\": {\n                  \"id\": 1,\n                  \"rt\": \"0\",\n                  \"rw\": \"0\",\n                  \"dusun\": \"MANGSIT\",\n                  \"id_kepala\": 0,\n                  \"lat\": \"\",\n                  \"lng\": \"\",\n                  \"zoom\": 0,\n                  \"path\": \"\",\n                  \"map_tipe\": \"\",\n                  \"warna\": null,\n                  \"urut\": null,\n                  \"urut_cetak\": null\n              },\n              \"no_kk\": \"5201140104126994\",\n              \"jalan_blok\": null,\n              \"kode_pos\": \"83355\",\n              \"status_kesejahteraan\": \"Keluarga Pra Sejahtera\",\n              \"penghasilan\": null,\n              \"status_kk\": null,\n              \"status_pkh\": null,\n              \"status_blt\": null,\n              \"status_bansos\": null,\n              \"desa\": \"5201142005\",\n              \"menguasai\": null\n          }\n     ],\n}"
       tags:
         - Endpoints
   '/v1/keluarga/{id}':
@@ -403,16 +403,30 @@ paths:
                       nama: AHLUL
                       nik: '5201142005716996'
                     alamat_lengkap: null
+                    objek_alamat:
+                      id: 1
+                      rt: '0'
+                      rw: '0'
+                      dusun: MANGSIT
+                      id_kepala: 0
+                      lat: ''
+                      lng: ''
+                      zoom: 0
+                      path: ''
+                      map_tipe: ''
+                      warna: null
+                      urut: null
+                      urut_cetak: null
                     no_kk: '5201140104126994'
                     jalan_blok: null
-                    kode_pos: null
-                    status_kesejahteraan: null
+                    kode_pos: '83355'
+                    status_kesejahteraan: 'Keluarga Pra Sejahtera'
                     penghasilan: null
                     status_kk: null
                     status_pkh: null
                     status_blt: null
                     status_bansos: null
-                    desa: null
+                    desa: '5201142005'
                     menguasai: null
                 properties:
                   data:
@@ -423,16 +437,30 @@ paths:
                         nama: AHLUL
                         nik: '5201142005716996'
                       alamat_lengkap: null
+                      objek_alamat:
+                        id: 1
+                        rt: '0'
+                        rw: '0'
+                        dusun: MANGSIT
+                        id_kepala: 0
+                        lat: ''
+                        lng: ''
+                        zoom: 0
+                        path: ''
+                        map_tipe: ''
+                        warna: null
+                        urut: null
+                        urut_cetak: null
                       no_kk: '5201140104126994'
                       jalan_blok: null
-                      kode_pos: null
-                      status_kesejahteraan: null
+                      kode_pos: '83355'
+                      status_kesejahteraan: 'Keluarga Pra Sejahtera'
                       penghasilan: null
                       status_kk: null
                       status_pkh: null
                       status_blt: null
                       status_bansos: null
-                      desa: null
+                      desa: '5201142005'
                       menguasai: null
       tags:
         - Endpoints
@@ -441,7 +469,7 @@ paths:
         in: path
         name: id
         description: ''
-        example: voluptas
+        example: voluptate
         required: true
         schema:
           type: string

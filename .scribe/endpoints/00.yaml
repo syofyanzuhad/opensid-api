@@ -48,13 +48,13 @@ endpoints:
         name: email
         description: 'The user email.'
         required: true
-        example: pariatur
+        example: optio
         type: email
       password:
         name: password
         description: 'Used to authenticate the user. Min: 6'
         required: true
-        example: quis
+        example: ducimus
         type: string
     responses: []
     responseFields: []
@@ -76,13 +76,13 @@ endpoints:
         name: email
         description: 'The user email.'
         required: true
-        example: ratione
+        example: tempora
         type: email
       password:
         name: password
         description: 'Used to authenticate the user.'
         required: true
-        example: saepe
+        example: expedita
         type: string
     responses: []
     responseFields: []
@@ -192,7 +192,7 @@ endpoints:
         name: id
         description: ''
         required: true
-        example: iusto
+        example: sunt
         type: string
     queryParameters: []
     bodyParameters: []
@@ -274,23 +274,38 @@ endpoints:
                "data": [
                     {
                         "id": 1,
-                        "kepala_keluarga": {
-                            "nama": "AHLUL",
-                            "nik": "5201142005716996"
-                        },
+                           "kepala_keluarga": {
+                               "nama": "AHLUL",
+                               "nik": "5201142005716996"
+                            },
                         "alamat_lengkap": null,
+                        "objek_alamat": {
+                            "id": 1,
+                            "rt": "0",
+                            "rw": "0",
+                            "dusun": "MANGSIT",
+                            "id_kepala": 0,
+                            "lat": "",
+                            "lng": "",
+                            "zoom": 0,
+                            "path": "",
+                            "map_tipe": "",
+                            "warna": null,
+                            "urut": null,
+                            "urut_cetak": null
+                        },
                         "no_kk": "5201140104126994",
                         "jalan_blok": null,
-                         "kode_pos": null,
-                        "status_kesejahteraan": null,
+                        "kode_pos": "83355",
+                        "status_kesejahteraan": "Keluarga Pra Sejahtera",
                         "penghasilan": null,
                         "status_kk": null,
                         "status_pkh": null,
                         "status_blt": null,
                         "status_bansos": null,
-                        "desa": null,
+                        "desa": "5201142005",
                         "menguasai": null
-                    },
+                    }
                ],
           }
         headers: []
@@ -313,7 +328,7 @@ endpoints:
         name: id
         description: ''
         required: true
-        example: voluptas
+        example: voluptate
         type: string
     queryParameters: []
     bodyParameters: []
@@ -324,21 +339,36 @@ endpoints:
           {
                "data": {
                    "id": 1,
-                   "kepala_keluarga": {
-                       "nama": "AHLUL",
-                        "nik": "5201142005716996"
-                   },
+                      "kepala_keluarga": {
+                          "nama": "AHLUL",
+                          "nik": "5201142005716996"
+                       },
                    "alamat_lengkap": null,
+                   "objek_alamat": {
+                       "id": 1,
+                       "rt": "0",
+                       "rw": "0",
+                       "dusun": "MANGSIT",
+                       "id_kepala": 0,
+                       "lat": "",
+                       "lng": "",
+                       "zoom": 0,
+                       "path": "",
+                       "map_tipe": "",
+                       "warna": null,
+                       "urut": null,
+                       "urut_cetak": null
+                   },
                    "no_kk": "5201140104126994",
                    "jalan_blok": null,
-                   "kode_pos": null,
-                   "status_kesejahteraan": null,
+                   "kode_pos": "83355",
+                   "status_kesejahteraan": "Keluarga Pra Sejahtera",
                    "penghasilan": null,
                    "status_kk": null,
                    "status_pkh": null,
                    "status_blt": null,
                    "status_bansos": null,
-                   "desa": null,
+                   "desa": "5201142005",
                    "menguasai": null
                }
            }
