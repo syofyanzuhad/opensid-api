@@ -53,7 +53,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
             <ul class="toc-footer" id="last-updated">
-            <li>Last updated: November 5 2021</li>
+            <li>Last updated: November 6 2021</li>
         </ul>
 </div>
 <div class="page-wrapper">
@@ -66,7 +66,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 <blockquote>
 <p>Base URL</p>
 </blockquote>
-<pre><code class="language-yaml">http://opensid-api.test</code></pre>
+<pre><code class="language-yaml">https://opensid-api.sandboxindonesia.id</code></pre>
 
         <h1>Authenticating requests</h1>
 <p>To authenticate requests, include an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
@@ -89,12 +89,12 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 
 <pre><code class="language-bash">curl --request GET \
-    --get "http://opensid-api.test/" \
+    --get "https://opensid-api.sandboxindonesia.id/" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
 <pre><code class="language-javascript">const url = new URL(
-    "http://opensid-api.test/"
+    "https://opensid-api.sandboxindonesia.id/"
 );
 
 const headers = {
@@ -177,18 +177,18 @@ content-type: application/json
 
 
 <pre><code class="language-bash">curl --request POST \
-    "http://opensid-api.test/v1/register" \
+    "https://opensid-api.sandboxindonesia.id/v1/register" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
     \"name\": \"\\\"barenglor\\\"\",
-    \"email\": \"optio\",
-    \"password\": \"ducimus\"
+    \"email\": \"\\\"test@gmail.com\\\"\",
+    \"password\": \"porro\"
 }"
 </code></pre>
 
 <pre><code class="language-javascript">const url = new URL(
-    "http://opensid-api.test/v1/register"
+    "https://opensid-api.sandboxindonesia.id/v1/register"
 );
 
 const headers = {
@@ -198,8 +198,8 @@ const headers = {
 
 let body = {
     "name": "\"barenglor\"",
-    "email": "optio",
-    "password": "ducimus"
+    "email": "\"test@gmail.com\"",
+    "password": "porro"
 };
 
 fetch(url, {
@@ -266,7 +266,7 @@ fetch(url, {
                 <input type="text"
                name="email"
                data-endpoint="POSTv1-register"
-               value="optio"
+               value=""test@gmail.com""
                data-component="body" hidden>
     <br>
 <p>The user email.</p>
@@ -276,7 +276,7 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTv1-register"
-               value="ducimus"
+               value="porro"
                data-component="body" hidden>
     <br>
 <p>Used to authenticate the user. Min: 6</p>
@@ -295,17 +295,17 @@ fetch(url, {
 
 
 <pre><code class="language-bash">curl --request POST \
-    "http://opensid-api.test/v1/login" \
+    "https://opensid-api.sandboxindonesia.id/v1/login" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"tempora\",
-    \"password\": \"expedita\"
+    \"email\": \"\\\"test@gmail.com\\\"\",
+    \"password\": \"ipsa\"
 }"
 </code></pre>
 
 <pre><code class="language-javascript">const url = new URL(
-    "http://opensid-api.test/v1/login"
+    "https://opensid-api.sandboxindonesia.id/v1/login"
 );
 
 const headers = {
@@ -314,8 +314,8 @@ const headers = {
 };
 
 let body = {
-    "email": "tempora",
-    "password": "expedita"
+    "email": "\"test@gmail.com\"",
+    "password": "ipsa"
 };
 
 fetch(url, {
@@ -372,7 +372,7 @@ fetch(url, {
                 <input type="text"
                name="email"
                data-endpoint="POSTv1-login"
-               value="tempora"
+               value=""test@gmail.com""
                data-component="body" hidden>
     <br>
 <p>The user email.</p>
@@ -382,7 +382,7 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTv1-login"
-               value="expedita"
+               value="ipsa"
                data-component="body" hidden>
     <br>
 <p>Used to authenticate the user.</p>
@@ -402,13 +402,13 @@ fetch(url, {
 
 
 <pre><code class="language-bash">curl --request POST \
-    "http://opensid-api.test/v1/logout" \
+    "https://opensid-api.sandboxindonesia.id/v1/logout" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
 <pre><code class="language-javascript">const url = new URL(
-    "http://opensid-api.test/v1/logout"
+    "https://opensid-api.sandboxindonesia.id/v1/logout"
 );
 
 const headers = {
@@ -487,13 +487,13 @@ fetch(url, {
 
 
 <pre><code class="language-bash">curl --request GET \
-    --get "http://opensid-api.test/v1/penduduk" \
+    --get "https://opensid-api.sandboxindonesia.id/v1/penduduk" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
 <pre><code class="language-javascript">const url = new URL(
-    "http://opensid-api.test/v1/penduduk"
+    "https://opensid-api.sandboxindonesia.id/v1/penduduk"
 );
 
 const headers = {
@@ -628,13 +628,13 @@ fetch(url, {
 
 
 <pre><code class="language-bash">curl --request GET \
-    --get "http://opensid-api.test/v1/penduduk/sunt" \
+    --get "https://opensid-api.sandboxindonesia.id/v1/penduduk/doloremque" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
 <pre><code class="language-javascript">const url = new URL(
-    "http://opensid-api.test/v1/penduduk/sunt"
+    "https://opensid-api.sandboxindonesia.id/v1/penduduk/doloremque"
 );
 
 const headers = {
@@ -758,7 +758,7 @@ fetch(url, {
                 <input type="text"
                name="id"
                data-endpoint="GETv1-penduduk--id-"
-               value="sunt"
+               value="doloremque"
                data-component="url" hidden>
     <br>
 
@@ -778,13 +778,13 @@ fetch(url, {
 
 
 <pre><code class="language-bash">curl --request GET \
-    --get "http://opensid-api.test/v1/keluarga" \
+    --get "https://opensid-api.sandboxindonesia.id/v1/keluarga" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
 <pre><code class="language-javascript">const url = new URL(
-    "http://opensid-api.test/v1/keluarga"
+    "https://opensid-api.sandboxindonesia.id/v1/keluarga"
 );
 
 const headers = {
@@ -907,13 +907,13 @@ fetch(url, {
 
 
 <pre><code class="language-bash">curl --request GET \
-    --get "http://opensid-api.test/v1/keluarga/voluptate" \
+    --get "https://opensid-api.sandboxindonesia.id/v1/keluarga/doloribus" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
 <pre><code class="language-javascript">const url = new URL(
-    "http://opensid-api.test/v1/keluarga/voluptate"
+    "https://opensid-api.sandboxindonesia.id/v1/keluarga/doloribus"
 );
 
 const headers = {
@@ -1025,7 +1025,7 @@ fetch(url, {
                 <input type="text"
                name="id"
                data-endpoint="GETv1-keluarga--id-"
-               value="voluptate"
+               value="doloribus"
                data-component="url" hidden>
     <br>
 
@@ -1045,13 +1045,13 @@ fetch(url, {
 
 
 <pre><code class="language-bash">curl --request PUT \
-    "http://opensid-api.test/v1/refresh" \
+    "https://opensid-api.sandboxindonesia.id/v1/refresh" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
 <pre><code class="language-javascript">const url = new URL(
-    "http://opensid-api.test/v1/refresh"
+    "https://opensid-api.sandboxindonesia.id/v1/refresh"
 );
 
 const headers = {

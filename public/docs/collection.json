@@ -5,12 +5,12 @@
             "key": "baseUrl",
             "type": "string",
             "name": "string",
-            "value": "opensid-api.test"
+            "value": "opensid-api.sandboxindonesia.id"
         }
     ],
     "info": {
         "name": "OpenSID-API",
-        "_postman_id": "e4d9e79b-3db1-439f-89c0-cb1b08d345f2",
+        "_postman_id": "67096acb-6c12-4524-8444-9e1fac9e0e76",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -23,11 +23,11 @@
                     "name": "\/",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "\/",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/\/"
+                            "raw": "https:\/\/{{baseUrl}}\/\/"
                         },
                         "method": "GET",
                         "header": [
@@ -68,11 +68,11 @@
                     "name": "Register a new user.",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "v1\/register",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/v1\/register"
+                            "raw": "https:\/\/{{baseUrl}}\/v1\/register"
                         },
                         "method": "POST",
                         "header": [
@@ -87,7 +87,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"\\\"barenglor\\\"\",\"email\":\"optio\",\"password\":\"ducimus\"}"
+                            "raw": "{\"name\":\"\\\"barenglor\\\"\",\"email\":\"\\\"test@gmail.com\\\"\",\"password\":\"porro\"}"
                         },
                         "description": "",
                         "auth": {
@@ -100,11 +100,11 @@
                     "name": "Get the authenticated User.",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "v1\/login",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/v1\/login"
+                            "raw": "https:\/\/{{baseUrl}}\/v1\/login"
                         },
                         "method": "POST",
                         "header": [
@@ -119,7 +119,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"tempora\",\"password\":\"expedita\"}"
+                            "raw": "{\"email\":\"\\\"test@gmail.com\\\"\",\"password\":\"ipsa\"}"
                         },
                         "description": "",
                         "auth": {
@@ -132,11 +132,11 @@
                     "name": "Log the user out (Invalidate the token).",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "v1\/logout",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/v1\/logout"
+                            "raw": "https:\/\/{{baseUrl}}\/v1\/logout"
                         },
                         "method": "POST",
                         "header": [
@@ -158,11 +158,11 @@
                     "name": "Display a listing of the Penduduk resource.",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "v1\/penduduk",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/v1\/penduduk"
+                            "raw": "https:\/\/{{baseUrl}}\/v1\/penduduk"
                         },
                         "method": "GET",
                         "header": [
@@ -191,16 +191,16 @@
                     "name": "Show one of the Penduduk resource.",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "v1\/penduduk\/:id",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/v1\/penduduk\/:id",
+                            "raw": "https:\/\/{{baseUrl}}\/v1\/penduduk\/:id",
                             "variable": [
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "sunt",
+                                    "value": "doloremque",
                                     "description": ""
                                 }
                             ]
@@ -232,11 +232,11 @@
                     "name": "Display a listing of the Keluarga resource.",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "v1\/keluarga",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/v1\/keluarga"
+                            "raw": "https:\/\/{{baseUrl}}\/v1\/keluarga"
                         },
                         "method": "GET",
                         "header": [
@@ -265,16 +265,16 @@
                     "name": "Show one of the Keluarga resource.",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "v1\/keluarga\/:id",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/v1\/keluarga\/:id",
+                            "raw": "https:\/\/{{baseUrl}}\/v1\/keluarga\/:id",
                             "variable": [
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "voluptate",
+                                    "value": "doloribus",
                                     "description": ""
                                 }
                             ]
@@ -306,11 +306,11 @@
                     "name": "Get the token array structure.",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "v1\/refresh",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/v1\/refresh"
+                            "raw": "https:\/\/{{baseUrl}}\/v1\/refresh"
                         },
                         "method": "PUT",
                         "header": [

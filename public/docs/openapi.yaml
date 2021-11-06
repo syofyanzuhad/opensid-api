@@ -5,7 +5,7 @@ info:
   version: 1.0.0
 servers:
   -
-    url: 'http://opensid-api.test'
+    url: 'https://opensid-api.sandboxindonesia.id'
 paths:
   /:
     get:
@@ -73,11 +73,11 @@ paths:
                 email:
                   type: email
                   description: 'The user email.'
-                  example: optio
+                  example: '"test@gmail.com"'
                 password:
                   type: string
                   description: 'Used to authenticate the user. Min: 6'
-                  example: ducimus
+                  example: porro
               required:
                 - name
                 - email
@@ -115,11 +115,11 @@ paths:
                 email:
                   type: email
                   description: 'The user email.'
-                  example: tempora
+                  example: '"test@gmail.com"'
                 password:
                   type: string
                   description: 'Used to authenticate the user.'
-                  example: expedita
+                  example: ipsa
               required:
                 - email
                 - password
@@ -323,7 +323,7 @@ paths:
         in: path
         name: id
         description: ''
-        example: sunt
+        example: doloremque
         required: true
         schema:
           type: string
@@ -469,7 +469,7 @@ paths:
         in: path
         name: id
         description: ''
-        example: voluptate
+        example: doloribus
         required: true
         schema:
           type: string
