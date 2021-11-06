@@ -1,7 +1,7 @@
 # OpenSID API
 
 ## Development
-1. Clone repositori.
+1. Clone repository.
 ```
 git clone https://github.com/syofyanzuhad/opensid-api.git
 ```
