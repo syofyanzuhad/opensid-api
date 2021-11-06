@@ -19,7 +19,7 @@
 
     <script src="//cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
     <script>
-        var baseUrl = "https://opensid-api.sandboxindonesia.id";
+        var baseUrl = "http://opensid-api.test";
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
@@ -68,7 +68,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 <blockquote>
 <p>Base URL</p>
 </blockquote>
-<pre><code class="language-yaml">https://opensid-api.sandboxindonesia.id</code></pre>
+<pre><code class="language-yaml">http://opensid-api.test</code></pre>
 
         <h1>Authenticating requests</h1>
 <p>Authenticate requests to this API's endpoints by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
@@ -91,12 +91,12 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 
 <pre><code class="language-bash">curl --request GET \
-    --get "https://opensid-api.sandboxindonesia.id/" \
+    --get "http://opensid-api.test/" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
 <pre><code class="language-javascript">const url = new URL(
-    "https://opensid-api.sandboxindonesia.id/"
+    "http://opensid-api.test/"
 );
 
 const headers = {
@@ -111,7 +111,7 @@ fetch(url, {
 
 <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'https://opensid-api.sandboxindonesia.id/',
+    'http://opensid-api.test/',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -125,7 +125,7 @@ print_r(json_decode((string) $body));</code></pre>
 <pre><code class="language-python">import requests
 import json
 
-url = 'https://opensid-api.sandboxindonesia.id//'
+url = 'http://opensid-api.test//'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -145,7 +145,7 @@ response.json()</code></pre>
             </summary>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
-access-control-allow-origin: *
+vary: Origin
  </code></pre>
         </details>         <pre>
 
@@ -205,18 +205,18 @@ access-control-allow-origin: *
 
 
 <pre><code class="language-bash">curl --request POST \
-    "https://opensid-api.sandboxindonesia.id/v1/register" \
+    "http://opensid-api.test/v1/register" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
     \"name\": \"barenglor\",
     \"email\": \"test@gmail.com\",
-    \"password\": \"iure\"
+    \"password\": \"molestiae\"
 }"
 </code></pre>
 
 <pre><code class="language-javascript">const url = new URL(
-    "https://opensid-api.sandboxindonesia.id/v1/register"
+    "http://opensid-api.test/v1/register"
 );
 
 const headers = {
@@ -227,7 +227,7 @@ const headers = {
 let body = {
     "name": "barenglor",
     "email": "test@gmail.com",
-    "password": "iure"
+    "password": "molestiae"
 };
 
 fetch(url, {
@@ -238,7 +238,7 @@ fetch(url, {
 
 <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;post(
-    'https://opensid-api.sandboxindonesia.id/v1/register',
+    'http://opensid-api.test/v1/register',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -247,7 +247,7 @@ $response = $client-&gt;post(
         'json' =&gt; [
             'name' =&gt; 'barenglor',
             'email' =&gt; 'test@gmail.com',
-            'password' =&gt; 'iure',
+            'password' =&gt; 'molestiae',
         ],
     ]
 );
@@ -257,11 +257,11 @@ print_r(json_decode((string) $body));</code></pre>
 <pre><code class="language-python">import requests
 import json
 
-url = 'https://opensid-api.sandboxindonesia.id/v1/register'
+url = 'http://opensid-api.test/v1/register'
 payload = {
     "name": "barenglor",
     "email": "test@gmail.com",
-    "password": "iure"
+    "password": "molestiae"
 }
 headers = {
   'Content-Type': 'application/json',
@@ -339,7 +339,7 @@ response.json()</code></pre>
                 <input type="text"
                name="password"
                data-endpoint="POSTv1-register"
-               value="iure"
+               value="molestiae"
                data-component="body" hidden>
     <br>
 <p>Used to authenticate the user. Min: 6</p>
@@ -358,17 +358,17 @@ response.json()</code></pre>
 
 
 <pre><code class="language-bash">curl --request POST \
-    "https://opensid-api.sandboxindonesia.id/v1/login" \
+    "http://opensid-api.test/v1/login" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
     \"email\": \"test@gmail.com\",
-    \"password\": \"et\"
+    \"password\": \"nemo\"
 }"
 </code></pre>
 
 <pre><code class="language-javascript">const url = new URL(
-    "https://opensid-api.sandboxindonesia.id/v1/login"
+    "http://opensid-api.test/v1/login"
 );
 
 const headers = {
@@ -378,7 +378,7 @@ const headers = {
 
 let body = {
     "email": "test@gmail.com",
-    "password": "et"
+    "password": "nemo"
 };
 
 fetch(url, {
@@ -389,7 +389,7 @@ fetch(url, {
 
 <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;post(
-    'https://opensid-api.sandboxindonesia.id/v1/login',
+    'http://opensid-api.test/v1/login',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -397,7 +397,7 @@ $response = $client-&gt;post(
         ],
         'json' =&gt; [
             'email' =&gt; 'test@gmail.com',
-            'password' =&gt; 'et',
+            'password' =&gt; 'nemo',
         ],
     ]
 );
@@ -407,10 +407,10 @@ print_r(json_decode((string) $body));</code></pre>
 <pre><code class="language-python">import requests
 import json
 
-url = 'https://opensid-api.sandboxindonesia.id/v1/login'
+url = 'http://opensid-api.test/v1/login'
 payload = {
     "email": "test@gmail.com",
-    "password": "et"
+    "password": "nemo"
 }
 headers = {
   'Content-Type': 'application/json',
@@ -478,7 +478,7 @@ response.json()</code></pre>
                 <input type="text"
                name="password"
                data-endpoint="POSTv1-login"
-               value="et"
+               value="nemo"
                data-component="body" hidden>
     <br>
 <p>Used to authenticate the user.</p>
@@ -498,13 +498,13 @@ response.json()</code></pre>
 
 
 <pre><code class="language-bash">curl --request POST \
-    "https://opensid-api.sandboxindonesia.id/v1/logout" \
+    "http://opensid-api.test/v1/logout" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
 <pre><code class="language-javascript">const url = new URL(
-    "https://opensid-api.sandboxindonesia.id/v1/logout"
+    "http://opensid-api.test/v1/logout"
 );
 
 const headers = {
@@ -520,7 +520,7 @@ fetch(url, {
 
 <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;post(
-    'https://opensid-api.sandboxindonesia.id/v1/logout',
+    'http://opensid-api.test/v1/logout',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -535,7 +535,7 @@ print_r(json_decode((string) $body));</code></pre>
 <pre><code class="language-python">import requests
 import json
 
-url = 'https://opensid-api.sandboxindonesia.id/v1/logout'
+url = 'http://opensid-api.test/v1/logout'
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
   'Content-Type': 'application/json',
@@ -610,13 +610,13 @@ response.json()</code></pre>
 
 
 <pre><code class="language-bash">curl --request GET \
-    --get "https://opensid-api.sandboxindonesia.id/v1/penduduk" \
+    --get "http://opensid-api.test/v1/penduduk" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
 <pre><code class="language-javascript">const url = new URL(
-    "https://opensid-api.sandboxindonesia.id/v1/penduduk"
+    "http://opensid-api.test/v1/penduduk"
 );
 
 const headers = {
@@ -632,7 +632,7 @@ fetch(url, {
 
 <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'https://opensid-api.sandboxindonesia.id/v1/penduduk',
+    'http://opensid-api.test/v1/penduduk',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -647,7 +647,7 @@ print_r(json_decode((string) $body));</code></pre>
 <pre><code class="language-python">import requests
 import json
 
-url = 'https://opensid-api.sandboxindonesia.id/v1/penduduk'
+url = 'http://opensid-api.test/v1/penduduk'
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
   'Content-Type': 'application/json',
@@ -778,13 +778,13 @@ response.json()</code></pre>
 
 
 <pre><code class="language-bash">curl --request GET \
-    --get "https://opensid-api.sandboxindonesia.id/v1/penduduk/doloremque" \
+    --get "http://opensid-api.test/v1/penduduk/architecto" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
 <pre><code class="language-javascript">const url = new URL(
-    "https://opensid-api.sandboxindonesia.id/v1/penduduk/doloremque"
+    "http://opensid-api.test/v1/penduduk/architecto"
 );
 
 const headers = {
@@ -800,7 +800,7 @@ fetch(url, {
 
 <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'https://opensid-api.sandboxindonesia.id/v1/penduduk/doloremque',
+    'http://opensid-api.test/v1/penduduk/architecto',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -815,7 +815,7 @@ print_r(json_decode((string) $body));</code></pre>
 <pre><code class="language-python">import requests
 import json
 
-url = 'https://opensid-api.sandboxindonesia.id/v1/penduduk/doloremque'
+url = 'http://opensid-api.test/v1/penduduk/architecto'
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
   'Content-Type': 'application/json',
@@ -935,7 +935,7 @@ response.json()</code></pre>
                 <input type="text"
                name="id"
                data-endpoint="GETv1-penduduk--id-"
-               value="doloremque"
+               value="architecto"
                data-component="url" hidden>
     <br>
 
@@ -955,13 +955,13 @@ response.json()</code></pre>
 
 
 <pre><code class="language-bash">curl --request GET \
-    --get "https://opensid-api.sandboxindonesia.id/v1/keluarga" \
+    --get "http://opensid-api.test/v1/keluarga" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
 <pre><code class="language-javascript">const url = new URL(
-    "https://opensid-api.sandboxindonesia.id/v1/keluarga"
+    "http://opensid-api.test/v1/keluarga"
 );
 
 const headers = {
@@ -977,7 +977,7 @@ fetch(url, {
 
 <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'https://opensid-api.sandboxindonesia.id/v1/keluarga',
+    'http://opensid-api.test/v1/keluarga',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -992,7 +992,7 @@ print_r(json_decode((string) $body));</code></pre>
 <pre><code class="language-python">import requests
 import json
 
-url = 'https://opensid-api.sandboxindonesia.id/v1/keluarga'
+url = 'http://opensid-api.test/v1/keluarga'
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
   'Content-Type': 'application/json',
@@ -1111,13 +1111,13 @@ response.json()</code></pre>
 
 
 <pre><code class="language-bash">curl --request GET \
-    --get "https://opensid-api.sandboxindonesia.id/v1/keluarga/quisquam" \
+    --get "http://opensid-api.test/v1/keluarga/autem" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
 <pre><code class="language-javascript">const url = new URL(
-    "https://opensid-api.sandboxindonesia.id/v1/keluarga/quisquam"
+    "http://opensid-api.test/v1/keluarga/autem"
 );
 
 const headers = {
@@ -1133,7 +1133,7 @@ fetch(url, {
 
 <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'https://opensid-api.sandboxindonesia.id/v1/keluarga/quisquam',
+    'http://opensid-api.test/v1/keluarga/autem',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -1148,7 +1148,7 @@ print_r(json_decode((string) $body));</code></pre>
 <pre><code class="language-python">import requests
 import json
 
-url = 'https://opensid-api.sandboxindonesia.id/v1/keluarga/quisquam'
+url = 'http://opensid-api.test/v1/keluarga/autem'
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
   'Content-Type': 'application/json',
@@ -1256,7 +1256,7 @@ response.json()</code></pre>
                 <input type="text"
                name="id"
                data-endpoint="GETv1-keluarga--id-"
-               value="quisquam"
+               value="autem"
                data-component="url" hidden>
     <br>
 
@@ -1276,13 +1276,13 @@ response.json()</code></pre>
 
 
 <pre><code class="language-bash">curl --request PUT \
-    "https://opensid-api.sandboxindonesia.id/v1/refresh" \
+    "http://opensid-api.test/v1/refresh" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
 <pre><code class="language-javascript">const url = new URL(
-    "https://opensid-api.sandboxindonesia.id/v1/refresh"
+    "http://opensid-api.test/v1/refresh"
 );
 
 const headers = {
@@ -1298,7 +1298,7 @@ fetch(url, {
 
 <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;put(
-    'https://opensid-api.sandboxindonesia.id/v1/refresh',
+    'http://opensid-api.test/v1/refresh',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -1313,7 +1313,7 @@ print_r(json_decode((string) $body));</code></pre>
 <pre><code class="language-python">import requests
 import json
 
-url = 'https://opensid-api.sandboxindonesia.id/v1/refresh'
+url = 'http://opensid-api.test/v1/refresh'
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
   'Content-Type': 'application/json',

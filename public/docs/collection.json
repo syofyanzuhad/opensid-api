@@ -5,12 +5,12 @@
             "key": "baseUrl",
             "type": "string",
             "name": "string",
-            "value": "opensid-api.sandboxindonesia.id"
+            "value": "opensid-api.test"
         }
     ],
     "info": {
         "name": "OpenSID-API",
-        "_postman_id": "5fd1222e-4a42-4196-98b6-5135af061a05",
+        "_postman_id": "ac5a1b36-0b0d-440d-9dc5-d6a8cd642d63",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -23,11 +23,11 @@
                     "name": "\/",
                     "request": {
                         "url": {
-                            "protocol": "https",
+                            "protocol": "http",
                             "host": "{{baseUrl}}",
                             "path": "\/",
                             "query": [],
-                            "raw": "https:\/\/{{baseUrl}}\/\/"
+                            "raw": "http:\/\/{{baseUrl}}\/\/"
                         },
                         "method": "GET",
                         "header": [
@@ -58,8 +58,8 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
+                                    "key": "vary",
+                                    "value": "Origin"
                                 }
                             ],
                             "code": 200,
@@ -72,11 +72,11 @@
                     "name": "Register a new user.",
                     "request": {
                         "url": {
-                            "protocol": "https",
+                            "protocol": "http",
                             "host": "{{baseUrl}}",
                             "path": "v1\/register",
                             "query": [],
-                            "raw": "https:\/\/{{baseUrl}}\/v1\/register"
+                            "raw": "http:\/\/{{baseUrl}}\/v1\/register"
                         },
                         "method": "POST",
                         "header": [
@@ -91,7 +91,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"barenglor\",\"email\":\"test@gmail.com\",\"password\":\"iure\"}"
+                            "raw": "{\"name\":\"barenglor\",\"email\":\"test@gmail.com\",\"password\":\"molestiae\"}"
                         },
                         "description": "",
                         "auth": {
@@ -104,11 +104,11 @@
                     "name": "Get the authenticated User.",
                     "request": {
                         "url": {
-                            "protocol": "https",
+                            "protocol": "http",
                             "host": "{{baseUrl}}",
                             "path": "v1\/login",
                             "query": [],
-                            "raw": "https:\/\/{{baseUrl}}\/v1\/login"
+                            "raw": "http:\/\/{{baseUrl}}\/v1\/login"
                         },
                         "method": "POST",
                         "header": [
@@ -123,7 +123,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"test@gmail.com\",\"password\":\"et\"}"
+                            "raw": "{\"email\":\"test@gmail.com\",\"password\":\"nemo\"}"
                         },
                         "description": "",
                         "auth": {
@@ -136,11 +136,11 @@
                     "name": "Log the user out (Invalidate the token).",
                     "request": {
                         "url": {
-                            "protocol": "https",
+                            "protocol": "http",
                             "host": "{{baseUrl}}",
                             "path": "v1\/logout",
                             "query": [],
-                            "raw": "https:\/\/{{baseUrl}}\/v1\/logout"
+                            "raw": "http:\/\/{{baseUrl}}\/v1\/logout"
                         },
                         "method": "POST",
                         "header": [
@@ -162,11 +162,11 @@
                     "name": "Display a listing of the Penduduk resource.",
                     "request": {
                         "url": {
-                            "protocol": "https",
+                            "protocol": "http",
                             "host": "{{baseUrl}}",
                             "path": "v1\/penduduk",
                             "query": [],
-                            "raw": "https:\/\/{{baseUrl}}\/v1\/penduduk"
+                            "raw": "http:\/\/{{baseUrl}}\/v1\/penduduk"
                         },
                         "method": "GET",
                         "header": [
@@ -195,16 +195,16 @@
                     "name": "Show one of the Penduduk resource.",
                     "request": {
                         "url": {
-                            "protocol": "https",
+                            "protocol": "http",
                             "host": "{{baseUrl}}",
                             "path": "v1\/penduduk\/:id",
                             "query": [],
-                            "raw": "https:\/\/{{baseUrl}}\/v1\/penduduk\/:id",
+                            "raw": "http:\/\/{{baseUrl}}\/v1\/penduduk\/:id",
                             "variable": [
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "doloremque",
+                                    "value": "architecto",
                                     "description": ""
                                 }
                             ]
@@ -236,11 +236,11 @@
                     "name": "Display a listing of the Keluarga resource.",
                     "request": {
                         "url": {
-                            "protocol": "https",
+                            "protocol": "http",
                             "host": "{{baseUrl}}",
                             "path": "v1\/keluarga",
                             "query": [],
-                            "raw": "https:\/\/{{baseUrl}}\/v1\/keluarga"
+                            "raw": "http:\/\/{{baseUrl}}\/v1\/keluarga"
                         },
                         "method": "GET",
                         "header": [
@@ -269,16 +269,16 @@
                     "name": "Show one of the Keluarga resource.",
                     "request": {
                         "url": {
-                            "protocol": "https",
+                            "protocol": "http",
                             "host": "{{baseUrl}}",
                             "path": "v1\/keluarga\/:id",
                             "query": [],
-                            "raw": "https:\/\/{{baseUrl}}\/v1\/keluarga\/:id",
+                            "raw": "http:\/\/{{baseUrl}}\/v1\/keluarga\/:id",
                             "variable": [
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "quisquam",
+                                    "value": "autem",
                                     "description": ""
                                 }
                             ]
@@ -310,11 +310,11 @@
                     "name": "Get the token array structure.",
                     "request": {
                         "url": {
-                            "protocol": "https",
+                            "protocol": "http",
                             "host": "{{baseUrl}}",
                             "path": "v1\/refresh",
                             "query": [],
-                            "raw": "https:\/\/{{baseUrl}}\/v1\/refresh"
+                            "raw": "http:\/\/{{baseUrl}}\/v1\/refresh"
                         },
                         "method": "PUT",
                         "header": [

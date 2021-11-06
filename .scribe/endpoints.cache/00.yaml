@@ -24,7 +24,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          access-control-allow-origin: '*'
+          vary: Origin
         description: null
     responseFields: []
   -
@@ -57,7 +57,7 @@ endpoints:
         name: password
         description: 'Used to authenticate the user. Min: 6'
         required: true
-        example: iure
+        example: molestiae
         type: string
     responses: []
     responseFields: []
@@ -85,7 +85,7 @@ endpoints:
         name: password
         description: 'Used to authenticate the user.'
         required: true
-        example: et
+        example: nemo
         type: string
     responses: []
     responseFields: []
@@ -195,7 +195,7 @@ endpoints:
         name: id
         description: ''
         required: true
-        example: doloremque
+        example: architecto
         type: string
     queryParameters: []
     bodyParameters: []
@@ -331,7 +331,7 @@ endpoints:
         name: id
         description: ''
         required: true
-        example: quisquam
+        example: autem
         type: string
     queryParameters: []
     bodyParameters: []
