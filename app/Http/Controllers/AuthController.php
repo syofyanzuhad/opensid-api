@@ -10,8 +10,8 @@ class AuthController extends Controller
     /**
      * Register a new user.
      *
-     * @bodyParam name string required The name of the user. Example: "barenglor"
-     * @bodyParam email email required The user email. Example: "test@gmail.com"
+     * @bodyParam name string required The name of the user. Example: barenglor
+     * @bodyParam email email required The user email. Example: test@gmail.com
      * @bodyParam password string required Used to authenticate the user. Min: 6
      *
      * @return void
@@ -54,7 +54,7 @@ class AuthController extends Controller
     /**
      * Get the authenticated User.
      *
-     * @bodyParam email email required The user email. Example: "test@gmail.com"
+     * @bodyParam email email required The user email. Example: test@gmail.com
      * @bodyParam password string required Used to authenticate the user.
      * 
      * @return \Illuminate\Http\JsonResponse
