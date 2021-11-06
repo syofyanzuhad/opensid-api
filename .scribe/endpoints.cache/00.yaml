@@ -24,6 +24,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
+          access-control-allow-origin: '*'
         description: null
     responseFields: []
   -
@@ -44,19 +45,19 @@ endpoints:
         name: name
         description: 'The name of the user.'
         required: true
-        example: '"barenglor"'
+        example: barenglor
         type: string
       email:
         name: email
         description: 'The user email.'
         required: true
-        example: '"test@gmail.com"'
+        example: test@gmail.com
         type: email
       password:
         name: password
         description: 'Used to authenticate the user. Min: 6'
         required: true
-        example: porro
+        example: iure
         type: string
     responses: []
     responseFields: []
@@ -78,13 +79,13 @@ endpoints:
         name: email
         description: 'The user email.'
         required: true
-        example: '"test@gmail.com"'
+        example: test@gmail.com
         type: email
       password:
         name: password
         description: 'Used to authenticate the user.'
         required: true
-        example: ipsa
+        example: et
         type: string
     responses: []
     responseFields: []
@@ -330,7 +331,7 @@ endpoints:
         name: id
         description: ''
         required: true
-        example: doloribus
+        example: quisquam
         type: string
     queryParameters: []
     bodyParameters: []
