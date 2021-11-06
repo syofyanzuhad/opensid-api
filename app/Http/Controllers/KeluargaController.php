@@ -12,8 +12,9 @@ class KeluargaController extends Controller
     /**
      * Display a listing of the Keluarga resource.
      *
-     * @authenticated
      * @return \Illuminate\Http\Response
+     * 
+     * @authenticated
      * @response scenario=success 
      * {
      *      "data": [
@@ -62,10 +63,11 @@ class KeluargaController extends Controller
     /**
      * Show one of the Keluarga resource.
      *
-     * @authenticated
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      * 
+     * @authenticated
+     * @urlParam id integer required The ID of the keluarga. Example: 1
      * @response scenario=success
      * {
      *      "data": {

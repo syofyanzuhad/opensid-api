@@ -11,8 +11,9 @@ class PendudukController extends Controller
     /**
      * Display a listing of the Penduduk resource.
      *
-     * @authenticated
      * @return \Illuminate\Http\Response
+     * 
+     * @authenticated
      * @response scenario=success
      * {
      *      "data": [
@@ -73,9 +74,11 @@ class PendudukController extends Controller
     /**
      * Show one of the Penduduk resource.
      *
-     * @authenticated
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
+     * 
+     * @authenticated
+     * @urlParam id integer required The ID of the penduduk. Example: 1
      * @response scenario=success
      * {
      *      "data": {
