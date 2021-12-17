@@ -11,7 +11,7 @@ class AuthController extends Controller
      * Register a new user.
      *
      * @bodyParam name string required The name of the user. Example: barenglor
-     * @bodyParam email email required The user email. Example: test@gmail.com
+     * @bodyParam username username required The user username. Example: test@gmail.com
      * @bodyParam password string required Used to authenticate the user. Min: 6
      *
      * @return void
@@ -20,7 +20,7 @@ class AuthController extends Controller
     {
         $this->validate($request, [
             'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
+            'username' => 'required|string|max:255|unique:users',
             'password' => 'required|string|min:6',
         ]);
 
@@ -28,7 +28,7 @@ class AuthController extends Controller
         try {
             User::create([
                 'name' => $request->name,
-                'email' => $request->email,
+                'username' => $request->username,
                 'password' => app('hash')->make($request->password),
             ]);
 
@@ -54,7 +54,7 @@ class AuthController extends Controller
     /**
      * Get the authenticated User.
      *
-     * @bodyParam email email required The user email. Example: test@gmail.com
+     * @bodyParam username username required The user username. Example: test@gmail.com
      * @bodyParam password string required Used to authenticate the user.
      * 
      * @return \Illuminate\Http\JsonResponse
@@ -62,11 +62,11 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $this->validate($request, [
-            'email' => 'required|string|email|max:255|exists:users,email',
+            'username' => 'required|string|max:255|exists:users,username',
             'password' => 'required|string',
         ]);
 
-        $credentials = request(['email', 'password']);
+        $credentials = request(['username', 'password']);
 
         if (!$token = auth()->attempt($credentials)) {
             return response()->json(['error' => 'Unauthorized'], 401);

@@ -13,10 +13,11 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
+        // JANGAN PERNAH JALANKAN MIGRATE:REFREST
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email')->unique();
+            $table->string('username')->unique();
             $table->string('password');
             $table->timestamps();
         });
