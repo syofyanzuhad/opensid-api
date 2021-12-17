@@ -16,10 +16,12 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call('UsersTableSeeder');
         // seed new user with closure
-        \App\Models\User::class::create([
-                'name' => 'Admin',
-                'username' => 'admin',
-                'password' => Hash::make('secret'),
-            ]);
+        \App\Models\User::firstOrCreate([
+            'username' => 'admin',
+        ],
+        [
+            'name' => 'Admin',
+            'password' => Hash::make('secret'),
+        ]);
     }
 }
