@@ -67,7 +67,6 @@ class PendudukController extends Controller
      */
     public function index()
     {
-        return PendudukResource::collection(Penduduk::all());
         $penduduk = new Penduduk();
         $limit = request()->query('per_page', 50);
 
