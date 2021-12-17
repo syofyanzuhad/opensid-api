@@ -60,14 +60,14 @@ class KeluargaController extends Controller
 
         $limit = request()->query('per_page', 50);
 
-        if (request()->has('include') && request()->query('include') != null) {
-            if (is_array(request()->query('include'))) {
-                foreach (request()->query('include') as $include) {
+        if (request()->has('include[]') && request()->query('include[]') != null) {
+            if (is_array(request()->query('include[]'))) {
+                foreach (request()->query('include[]') as $include) {
                     $keluarga->with($include);
                 }
             }
             else {
-                $keluarga->with(request()->query('include'));
+                $keluarga->with(request()->query('include[]'));
             }
         }
 
