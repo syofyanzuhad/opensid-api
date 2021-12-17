@@ -83,8 +83,7 @@ class PendudukController extends Controller
 
         if (request()->has('search')) {
             $search = request()->query('search');
-            $penduduk = $penduduk->where('nama', 'like', '%' . $search . '%')
-                ->paginate($limit);
+            $penduduk = $penduduk->where('nama', 'like', '%' . $search . '%');
         }
 
         $penduduk = $penduduk->paginate($limit);
