@@ -20,10 +20,10 @@ class KeluargaController extends Controller
      *      "data": [
      *           {   
      *               "id": 1,
-     *                  "kepala_keluarga": {
-     *                      "nama": "AHLUL",
-     *                      "nik": "5201142005716996"
-     *                   },
+     *               "kepala_keluarga": {
+     *                   "nama": "AHLUL",
+     *                   "nik": "5201142005716996"
+     *               },
      *               "alamat_lengkap": null,
      *               "objek_alamat": {
      *                   "id": 1,
@@ -57,7 +57,7 @@ class KeluargaController extends Controller
      */
     public function index()
     {
-        return new KeluargaCollection(Keluarga::all());
+        return new KeluargaCollection(Keluarga::paginate()->get());
     }
 
     /**
@@ -72,10 +72,10 @@ class KeluargaController extends Controller
      * {
      *      "data": {
      *          "id": 1,
-     *             "kepala_keluarga": {
-     *                 "nama": "AHLUL",
-     *                 "nik": "5201142005716996"
-     *              },
+     *          "kepala_keluarga": {
+     *              "nama": "AHLUL",
+     *              "nik": "5201142005716996"
+     *          },
      *          "alamat_lengkap": null,
      *          "objek_alamat": {
      *              "id": 1,
