@@ -56,7 +56,9 @@ class KeluargaController extends Controller
      */
     public function index()
     {
-        return KeluargaResource::collection(Keluarga::paginate());
+        $limit = request()->query('per_page', 50);
+
+        return KeluargaResource::collection(Keluarga::paginate($limit));
     }
 
     /**
