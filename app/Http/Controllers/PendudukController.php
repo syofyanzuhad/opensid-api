@@ -67,9 +67,18 @@ class PendudukController extends Controller
      */
     public function index()
     {
+        $penduduk = new Penduduk();
         $limit = request()->query('per_page', 50);
 
-        return PendudukResource::collection(Penduduk::paginate($limit));
+        if (request()->has('search')) {
+            $search = request()->query('search');
+            $penduduk = $penduduk->where('nama', 'like', '%' . $search . '%')
+                ->paginate($limit);
+        } else {
+            $penduduk = $penduduk->paginate($limit);
+        }
+
+        return PendudukResource::collection($penduduk);
     }
 
     /**

@@ -56,9 +56,18 @@ class KeluargaController extends Controller
      */
     public function index()
     {
+        $keluarga = new Keluarga;
+
         $limit = request()->query('per_page', 50);
 
-        return KeluargaResource::collection(Keluarga::paginate($limit));
+        if (request()->has('search')) {
+            $search = request()->query('search');
+            $keluarga = $keluarga->where('no_kk', 'like', '%' . $search . '%');
+        }
+
+        $keluarga = $keluarga->paginate($limit);
+
+        return KeluargaResource::collection($keluarga);
     }
 
     /**
