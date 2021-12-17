@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\KeluargaCollection;
 use App\Http\Resources\KeluargaResource;
 use App\Models\Keluarga;
 use Illuminate\Http\Request;
@@ -57,7 +56,7 @@ class KeluargaController extends Controller
      */
     public function index()
     {
-        return new KeluargaCollection(Keluarga::paginate()->get());
+        return KeluargaResource::collection(Keluarga::paginate()->get());
     }
 
     /**

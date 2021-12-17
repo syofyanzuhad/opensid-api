@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\PendudukCollection;
 use App\Http\Resources\PendudukResource;
 use App\Models\Penduduk;
 
@@ -68,7 +67,7 @@ class PendudukController extends Controller
      */
     public function index()
     {
-        return new PendudukCollection(Penduduk::paginate()->get());
+        return PendudukResource::collection(Penduduk::paginate()->get());
     }
 
     /**
