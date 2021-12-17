@@ -67,7 +67,7 @@ class PendudukController extends Controller
      */
     public function index()
     {
-        return PendudukResource::collection(Penduduk::paginate()->get());
+        return PendudukResource::collection(Penduduk::paginate());
     }
 
     /**

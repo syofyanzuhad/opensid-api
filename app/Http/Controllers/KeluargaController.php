@@ -56,7 +56,7 @@ class KeluargaController extends Controller
      */
     public function index()
     {
-        return KeluargaResource::collection(Keluarga::paginate()->get());
+        return KeluargaResource::collection(Keluarga::paginate());
     }
 
     /**
