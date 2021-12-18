@@ -77,6 +77,11 @@ class PendudukController extends Controller
         $penduduk = Penduduk::query();
         $limit = request()->query('per_page', 50);
 
+        if (request()->has('search') && request()->query('search') != null) {
+            $search = request()->query('search');
+            $penduduk = $penduduk->where('nama', 'like', '%' . $search . '%');
+        }
+
         if (request()->has('include') && request()->query('include') != null) {
             if (is_array(request()->query('include'))) {
                 foreach (request()->query('include') as $include) {
@@ -86,11 +91,6 @@ class PendudukController extends Controller
             else {
                 $penduduk->with(request()->query('include').'.anggota');
             }
-        }
-
-        if (request()->has('search') && request()->query('search') != null) {
-            $search = request()->query('search');
-            $penduduk = $penduduk->where('nama', 'like', '%' . $search . '%');
         }
 
         $penduduk = $penduduk->paginate($limit);
