@@ -13,6 +13,13 @@ class PendudukController extends Controller
      * @return \Illuminate\Http\Response
      * 
      * @authenticated
+     * 
+     * 
+     * @queryParam search string Search by KK Number. Example: Ahlul
+     * @queryParam page int The page number. Example: 1
+     * @queryParam per_page int Number of items per page. Example: 10
+     * @queryParam include[] string Include Anggota of keluarga. Example: keluarga
+     * 
      * @response scenario=success
      * {
      *      "data": [
@@ -67,21 +74,21 @@ class PendudukController extends Controller
      */
     public function index()
     {
-        $penduduk = new Penduduk();
+        $penduduk = Penduduk::query();
         $limit = request()->query('per_page', 50);
 
-        if (request()->has('include[]') && request()->query('include[]') != null) {
-            if (is_array(request()->query('include[]'))) {
-                foreach (request()->query('include[]') as $include) {
-                    $penduduk->with($include);
+        if (request()->has('include') && request()->query('include') != null) {
+            if (is_array(request()->query('include'))) {
+                foreach (request()->query('include') as $include) {
+                    $penduduk->with($include.'.anggota');
                 }
             }
             else {
-                $penduduk->with(request()->query('include[]'));
+                $penduduk->with(request()->query('include').'.anggota');
             }
         }
 
-        if (request()->has('search')) {
+        if (request()->has('search') && request()->query('search') != null) {
             $search = request()->query('search');
             $penduduk = $penduduk->where('nama', 'like', '%' . $search . '%');
         }

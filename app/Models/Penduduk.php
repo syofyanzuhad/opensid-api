@@ -22,7 +22,7 @@ class Penduduk extends Model
 
     public function keluarga()
     {
-        return $this->belongsTo(Keluarga::class, 'id_kk');
+        return $this->hasMany(Keluarga::class, 'nik_kepala', 'id_kk');
     }
 
     public function agama() {

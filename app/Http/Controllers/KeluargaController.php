@@ -14,6 +14,13 @@ class KeluargaController extends Controller
      * @return \Illuminate\Http\Response
      * 
      * @authenticated
+     * 
+     * @queryParam search string Search by KK Number. Example: 5201142005716996
+     * @queryParam page int The page number. Example: 1
+     * @queryParam per_page int Number of items per page. Example: 10
+     * @queryParam include[] string Include Anggota of keluarga. Example: anggota
+     * 
+     * 
      * @response scenario=success 
      * {
      *      "data": [
@@ -56,24 +63,23 @@ class KeluargaController extends Controller
      */
     public function index()
     {
-        $keluarga = new Keluarga;
-
+        $keluarga = Keluarga::query();
         $limit = request()->query('per_page', 50);
 
-        if (request()->has('include[]') && request()->query('include[]') != null) {
-            if (is_array(request()->query('include[]'))) {
-                foreach (request()->query('include[]') as $include) {
+        if (request()->has('search') && request()->query('search') != null) {
+            $search = request()->query('search');
+            $keluarga = $keluarga->where('no_kk', 'like', '%' . $search . '%');
+        }
+
+        if (request()->has('include') && request()->query('include') != null) {
+            if (is_array(request()->query('include'))) {
+                foreach (request()->query('include') as $include) {
                     $keluarga->with($include);
                 }
             }
             else {
-                $keluarga->with(request()->query('include[]'));
+                $keluarga->with(request()->query('include'));
             }
-        }
-
-        if (request()->has('search')) {
-            $search = request()->query('search');
-            $keluarga = $keluarga->where('no_kk', 'like', '%' . $search . '%');
         }
 
         $keluarga = $keluarga->paginate($limit);

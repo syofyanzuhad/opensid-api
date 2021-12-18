@@ -21,7 +21,7 @@ class Keluarga extends Model
     ];
 
     public function anggota() {
-        return $this->hasMany(Penduduk::class, 'id_kk')->where('kk_level', '!=', 1);
+        return $this->hasMany(Penduduk::class, 'id_kk', 'nik_kepala');
     }
 
     public function penduduk()

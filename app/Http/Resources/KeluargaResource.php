@@ -33,6 +33,7 @@ class KeluargaResource extends JsonResource
             "status_bansos" => $this->status_bansos,
             "desa" => $this->desa->kode_desa ?? null,
             "menguasai" => $this->menguasai,
+            "anggota" => PendudukResource::collection($this->whenLoaded('anggota')),
             // "tgl_daftar" => $this->tgl_daftar,
             // "kelas_sosial" => $this->kelas_sosial,
             // "tgl_cetak_kk" => $this->tgl_cetak_kk,

@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Resources;
 
+use App\Models\Keluarga;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class PendudukResource extends JsonResource
@@ -52,6 +53,7 @@ class PendudukResource extends JsonResource
             'created_by' => $this->created_by,
             'updated_by' => $this->updated_by,
             'deleted_by' => $this->deleted_by,
+            'keluaga' => KeluargaResource::collection($this->whenLoaded('keluarga')),
             // 'id_kk' => $this->name,
             // 'kk_level' => $this->name,
             // 'id_rtm' => $this->name,
